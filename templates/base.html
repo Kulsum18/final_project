@@ -1,0 +1,108 @@
+{% load static %}
+{% include "snippets/styles.html" %}
+
+<div class="container-fluid">
+  <div class="col-md-12">
+    <ul class="nav ">
+      <li class="nav-item active" >
+        <a href="#" class="fa fa-facebook nav-link"></a>
+      </li>
+      <li class="nav-item active" >
+
+        <a href="#" class="fa fa-twitter nav-link"></a>
+      </li>
+      <li class="nav-item active" >
+        <a href="#" class="fa fa-instagram nav-link"></a>
+      </li>
+      <li class="nav-item active" >
+        <a href="#" class="fa fa-google nav-link"></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'main_index' %}">Bogrades</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'main_index' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <button class="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="button">Masuk</button>
+      </form>
+    </div>
+  </div>
+
+</nav>
+
+<div >
+  {% block page_content_1 %}{% endblock %}
+</div>
+
+<div class="container">
+  {% block page_content_2 %}{% endblock %}
+</div>
+
+<div>
+  {% block page_content_3 %}{% endblock %}
+</div>
+
+<div>
+  {% block page_content_4 %}{% endblock %}
+</div>
+
+<div>
+  {% block page_content_5 %}{% endblock %}
+</div>
+
+<div>
+  {% block page_content_6 %}{% endblock %}
+</div>
+
+<div>
+  {% block page_content_7 %}{% endblock %}
+</div>
+
+<div>
+  {% block page_content_8 %}{% endblock %}
+</div>
+
+<div class="container-fluid" style="padding:20px;">
+  <div class="row">
+    <div class="col-md-4">
+      <img alt="Logo" src="{% static "/img/logo.png" %}" style="height:135px;" />
+      <p style="margin-top:5px;">
+        Tagline Komunitas
+      </p>
+    </div>
+    <div class="col-md-8">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link " href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Messages</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% include "snippets/scripts.html" %}
